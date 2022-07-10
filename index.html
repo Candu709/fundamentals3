@@ -11,36 +11,48 @@
 </html>
 
 <script>
-//Write a function called add7 that takes one number and returns that number + 7.
-let add7 = n => Number(n)+7;
-let n = prompt('Add this to 7,',0);
-console.log (n+' + 7 = '+add7(n))
+  //Write a function called add7 that takes one number and returns that number + 7.
+  let add7 = n => Number(n)+7;
+  let n = prompt('Add this to 7,',0);
+  console.log (n+' + 7 = '+add7(n))
 
-// Write a function called multiply that takes 2 numbers and returns their product.
-function multiply(){
-  let a;
-  let b;
-  do {
-    a = prompt("multiply first number",0)
-    if (isNaN(a)) { alert (a + ' is not a number')}
+
+  // Write a function called multiply that takes 2 numbers and returns their product.
+  function multiply(a,b){
+    do {
+      a = prompt("multiply first number",0)
+      if (isNaN(a)) { alert (a + ' is not a number')}
+    }
+    while (isNaN(a) == true);
+    console.log(a+' x')
+    do {
+      b = prompt("multiply second number",0)
+      if (isNaN(a)) { alert (b + ' is not a number')}
+    }
+    while (isNaN(b) == true);
+    console.log(b+' =')
+    return(a*b)
   }
-  while (isNaN(a) == true);
-  console.log(a+' x')
-  do {
-    b = prompt("multiply second number",0)
-    if (isNaN(a)) { alert (b + ' is not a number')}
+  console.log(multiply())
+
+
+  // Write a function called capitalize that takes a string and returns that string with only the first letter capitalized.
+  // Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+
+  let input = '   MiXEdStRIng '
+  console.log(`input = `+input);
+  function capitalize(string) {
+    string = string.trim();
+    lowercase = string.toLowerCase();
+    uppercase = string.toUpperCase();
+    return(uppercase.slice(0,1)+lowercase.slice(1));
   }
-  while (isNaN(b) == true);
-  console.log(b+' =')
-  return(a*b)
-}
-console.log(multiply())
-// Write a function called capitalize that takes a string and returns that string with only the first letter capitalized.
-// Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+  console.log(`capitalized -> `+capitalize(input));
 
 
 
-// Write a function called lastLetter that takes a string and returns the very last letter of that string
-// (eg. lastLetter("abcd") should return "d")
-
+  // Write a function called lastLetter that takes a string and returns the very last letter of that string
+  // (eg. lastLetter("abcd") should return "d")
+let lastLetter = string => string.substr(-1)
+console.log(lastLetter(`abcd`))
 </script>
